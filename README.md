@@ -89,21 +89,20 @@ Write-Output $jsonOutput
 **Sample Flow:**
   
 This example demonstrates how to **run a PowerShell script** to read a JSON configuration file and **convert the JSON output to a custom object** in order to retrieve the environment name and the corresponding site URL.
+![PAD2](https://github.com/user-attachments/assets/4d85b4f1-a0e0-49db-8547-a4bf77c20604)
 
-![Sample Flow](images/PAD.jpg)
 
 **PowerShell Script:**
- 
-Run Powershell Script:
 
-![Powershell Script](images/PowerShellScript.jpg)
+![PowerShellScript](https://github.com/user-attachments/assets/95717bce-1e36-4df3-97b1-ce602d1c2716)
+
 
 **Custom Object Output in PAD**
 
 After running the script and converting the JSON, your Power Automate Desktop flow will store the data in a custom object variable.  
-Below is a sample output visualization:
 
-![Custom object result](images/CustomObject.jpg)
+![CustomObject](https://github.com/user-attachments/assets/c4bd4c65-4007-4bd0-a6cb-c0fd8ad752ce)
+
 
 ## 6. Benefits
 - **Dynamic Environment Awareness:** PAD flows adapt automatically based on user or deployment context.  
