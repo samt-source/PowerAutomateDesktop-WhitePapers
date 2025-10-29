@@ -1,0 +1,8 @@
+{
+    "FlowName": "MyPADFlow-1",
+    "DevUserList": ["timothy", "SamTimothy"],
+    "TestUserList": ["qauser", "uatadmin"],
+    "DevURL": "https://dev.mysite.com",
+    "TestURL": "https://uat.mysite.com",
+    "ProdURL": "https://prod.mysite.com" 
+}

@@ -1,0 +1,31 @@
+# Path to JSON configuration file
+$AbsolutePath = "C:\Users\Sam Timothy\Documents\envconfig.JSON"
+
+# Read configuration
+$jsonContent = Get-Content -Path $AbsolutePath -Raw | ConvertFrom-Json
+
+# Get current username
+$currentUser = $env:USERNAME
+
+# Initialize hash table for output
+$values = @{}
+
+# Determine environment and corresponding URL
+if ($jsonContent.DevUserList -contains $currentUser) {
+    $values["Environment"] = "Development"
+    $values["SiteURL"]     = $jsonContent.DevURL
+}
+elseif ($jsonContent.TestUserList -contains $currentUser) {
+    $values["Environment"] = "Testing"
+    $values["SiteURL"]     = $jsonContent.TestURL
+}
+else {
+    $values["Environment"] = "Production"
+    $values["SiteURL"]     = $jsonContent.ProdURL
+}
+
+# Convert hash table to compact JSON string
+$jsonOutput = $values | ConvertTo-Json -Compress
+
+# Return JSON as output for PAD
+Write-Output $jsonOutput
