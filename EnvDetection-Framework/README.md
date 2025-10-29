@@ -1,7 +1,12 @@
 # Determining Environment Name in Power Automate Desktop Using Web Configuration File
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17470281.svg)](https://doi.org/10.5281/zenodo.17470281)
+
+A systems-engineering–based framework that introduces intelligent environment detection for Power Automate Desktop.  
+It enhances automation security, scalability, and reliability by enabling dynamic environment awareness across development, testing, and production. Developed by Sysfleet Consulting LLC, this research supports enterprise-grade RPA architecture and aligns with Microsoft’s Power Platform best practices.    
 **Author:** Sam Timothy  
-**Title:** Power Platform Specialist  
+**Publication DOI:** [10.5281/zenodo.17470281](https://doi.org/10.5281/zenodo.17470281) 
+  
 
 ---
 
