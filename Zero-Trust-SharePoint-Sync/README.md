@@ -1,7 +1,7 @@
 # Zero-Trust Data Synchronization: A Systems Approach for SharePoint Bulk Updates Under Minimal Permissions
 **Author:** Sam Timothy   
 **Date: 11/11/2025**  
-**Publication DOI:** [10.5281/zenodo.17470281](https://doi.org/10.5281/zenodo.17470281)  
+**Publication DOI:**  
 **Keywords:** Zero Trust, Systems Engineering, SharePoint Automation, Power Automate Desktop, Least Privilege, Data Synchronization 
 
 
@@ -12,7 +12,6 @@ This white paper proposes a **systems-engineering framework** for performing **b
 
 The approach integrates local orchestration, modular subsystems, and controlled feedback loops, enabling **full auditability, operational transparency, and resilience** aligned with **NIST 800-53** and the **CISA Zero-Trust Maturity Model** standards.
 
----
 
 ## **1. Introduction**
 
