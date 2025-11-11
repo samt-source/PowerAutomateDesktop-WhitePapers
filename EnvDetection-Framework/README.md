@@ -1,4 +1,4 @@
-# Determining Environment Name in Power Automate Desktop Using Web Configuration File
+# A Systems Approach to Environment-Aware Automation in Power Automate Desktop
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17470281.svg)](https://doi.org/10.5281/zenodo.17470281)
 
@@ -27,13 +27,21 @@ In enterprise RPA deployments:
 
 Hence, a method is required to dynamically identify the environment name and apply the correct configurations automatically.
 
-## 3. Proposed Solution: Web Config-Based Environment Identification
+## 3. Microsoft Idea Submission and Independent Resolution
+Before developing this solution, the author submitted an enhancement request through the official Microsoft Power Automate Ideas portal  
+([Idea ID 936e0e43-420d-ef11-989b-6045bd8185cf](https://ideas.powerautomate.com/d365community/idea/936e0e43-420d-ef11-989b-6045bd8185cf)) proposing a method to dynamically obtain the Power Automate Environment ID within Power Automate Desktop.
+
+After receiving no official response or product update from Microsoft, the author independently devised a technical solution to accurately identify the current Environment ID within Power Automate Desktop.  
+This independent approach became the basis of this white paper and establishes a reliable framework for environment-aware automation.
+
+
+## 4. Proposed Solution: Web Config-Based Environment Identification
 The solution involves:
 1. Storing environment definitions in a `web.config` or `config.json` file.  
 2. Using a PowerShell or JavaScript script within PAD to read and interpret this configuration file.  
 3. Assigning the environment name to a PAD variable for dynamic logic branching.
 
-## 4. Configuration File Structure
+## 5. Configuration File Structure
 
 Example JSON configuration file (`envconfig.json`):  
 *(You can add as many attributes as needed and save the file in an appropriate location e.g. a shared path accessible to all environments).*
@@ -48,7 +56,7 @@ Example JSON configuration file (`envconfig.json`):
 }
 ```
 
-## 5. Implementation in Power Automate Desktop
+## 6. Implementation in Power Automate Desktop
 Run a PowerShell script inside PAD to detect the logged-in user and determine the corresponding environment.
 
 **PowerShell Script Example:**
@@ -109,16 +117,16 @@ After running the script and converting the JSON, your Power Automate Desktop fl
 ![CustomObject](https://github.com/user-attachments/assets/c4bd4c65-4007-4bd0-a6cb-c0fd8ad752ce)
 
 
-## 6. Benefits
+## 7. Benefits
 - **Dynamic Environment Awareness:** PAD flows adapt automatically based on user or deployment context.  
 - **Reduced Maintenance:** No need to modify constants across environments.  
 - **Improved CI/CD Compatibility:** Enables smoother deployment via Azure DevOps pipelines.  
 - **Security & Governance:** Centralizes config access and reduces manual errors.
 
-## 7. Conclusion
+## 8. Conclusion
 The Web Config–based approach resolves a critical limitation in Power Automate Desktop by providing dynamic environment identification without hard-coding. This framework enhances scalability, standardization, and enterprise-level governance for automation solutions across environments.
 
-## 8. References
+## 9. References
 
 - [Run PowerShell Script – Scripting Actions Reference (Microsoft Power Automate Desktop)](https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/scripting)
 
